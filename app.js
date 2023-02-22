@@ -245,11 +245,11 @@ app.post("/clues/:number",function(req,res){
 });
 
 app.post("/register",function(req,res){
-    teamName=req.body.name;
-    teamMembers=req.body.members;
-    pocName=req.body.poc;
-    pocContact=req.body.pocContact;
-    code=Math.floor(100000 + Math.random() * 900000);
+    var teamName=req.body.name;
+    var teamMembers=req.body.members;
+    var pocName=req.body.poc;
+    var pocContact=req.body.pocContact;
+    var code=Math.floor(100000 + Math.random() * 900000);
     var updatedAt=new Date();
     var clues=[];
     Team.find({_id:teamName},function(err,results){
