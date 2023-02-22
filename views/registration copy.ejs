@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+
+ if(req.params.number==0){
+        console.log("inside if")
+        Team.findOne({_id:req.body.team,code:req.body.code},function(err,resu){
+            if(err) console.log(err);
+            else{
+                console.log("inside Team.findOne else")
+                var array=resu.clues;
+                array.includes(0)?console.log("already there!"):array.push(0);
+                Team.updateOne({_id:req.body.team,code:req.body.code},{clues:array},function(error,resp){
+                    if(error){
+                        console.log(error)
+                    }else{
+                        console.log("inside Team.updateOne else")
+                        Clue.findOne({_id:1},function(er,re){
+                            console.log(re);
+                            res.render("indclue",{clueText:re.clue});
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+
+
+   -->
+<!-- Team.findOne({_id:req.body.team,code:req.body.code},function(err,results){
+        if(err){
+            console.log(err);
+        }else{
+            if(results!=null){
+                if(req.params.number==0){
+                    var updated=results.clues;
+                    updated.includes(parseInt(req.params.number))?console.log("already there"):updated.push(parseInt(req.params.number));
+                    Team.updateOne({_id:req.body.team},{clues:updated},function(err,resu){
+                        if(err){
+                            console.log(err);
+                        } else{
+                            Clue.findOne({_id:1},function(err,baby){
+                                if(!err){
+                                    console.log(baby);
+                                    res.render("indclue",{clueText:baby.clue});
+                                }
+                            });             
+                        }
+                    });
+                }else{
+                    var updated=results.clues;
+                    Team.find({clues:parseInt(req.params.number)-1},function(err,results){
+                        if(err){
+                            console.log(err);
+                        }else{
+                            if(results.length!=0){
+                              Clue.find({_id:parseInt(req.params.number),code:req.query.code},function(err,rp){
+                                if(rp.length!=0){
+                                    updated.includes(parseInt(req.params.number))?console.log("already there"):updated.push(parseInt(req.params.number));
+                                    Team.updateOne({_id:req.body.team},{clues:updated},function(err,resu){
+                                        if(err){
+                                            console.log(err);
+                                        } else{
+                                            var numb=parseInt(req.params.number)+1;
+                                            console.log(numb);
+                                            Clue.findOne({_id:numb},function(err,baby){
+                                                if(!err){
+                                                console.log(req.params.number);
+                                                console.log(baby);
+                                                res.render("indclue",{clueText:baby.clue});
+                                                }
+                                            });             
+
+                                        }
+                                    });
+                                }else{
+                                    res.render("indclue",{clueText:"ABHAHAHAHHA NO BRO REACH THE CLUE FIRST AND SCAN THE CODE CORRECTLY"});
+                                }
+                            });
+
+                            } else{
+                                res.send("NO!");
+                            }
+                            
+                       }
+                    });
+                }
+            }else{
+                res.send("incorrect authentication code")
+            }
+        }
+    }); -->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TEDxAshokaUniversity</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/X.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    #header {
+     background:rgba(0, 0, 0, 0.98);
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: TheEvent - v3.0.0
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
+        <a href="/" class="scrollto"><img src="assets/img/TEDxAshokaUni.png" alt="" title="" width="275"></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/speakers">Speakers</a></li>
+          <li><a href="/event">Event</a></li>
+          <li><a href="/partners">Partners</a></li>
+          <li class="menu-active"><a href="/register">Registration</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+
+
+  <main id="main">
+
+    <!-- ======= Subscribe Section ======= -->
+    <section id="subscribe">
+      <div class="container" data-aos="zoom-in">
+        <div style="margin-top:100px" class="section-header">
+          <h2>Register Your Team</h2>
+          <p>Good luck for the treasure hunt!</p>
+        </div>
+
+        <div class="form">
+          <form id="form" action="/register" method="POST" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input required type="text" name="name" class="form-control" id="name" placeholder="Team Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input required type="email" class="form-control" name="email" id="email" placeholder="Any Email" data-rule="email" data-msg="Please enter a valid email" />
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <textarea required class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Team Members"></textarea>
+            </div>
+            <div class="mb-3">
+              <div id="spinner" style="margin:10px;display:none" class="spinner-border text-light" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+                <div style="margin:10px" class="error-message"><p id="error-message"></p></div>
+                <div style="margin:10px" class="sent-message"><p id="sent-message"></p></div>
+              </div>
+            <div class="text-center"><button type="submit">Register</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Subscribe Section -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+         <div class="col-lg-10 col-md-6 footer-info"></div>
+          <div class="col-lg-10 col-md-6 footer-info">
+            <h3>What is <font color = "EB0028">TEDx</font>?</h3>
+            <p>In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. 
+              </p><br><br>
+          </div>
+            <center>
+            <div class="social-links">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tedx@ashoka.edu.in"
+ class="twitter" target="_blank"><i class="fa fa-envelope"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100090096037240&mibextid=LQQJ4d" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/company/tedxashokauniversity/" class="instagram" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://twitter.com/TEDxAshoka" class="google-plus" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://instagram.com/tedxashokauniv?igshid=YmMyMTA2M2Y=" class="linkedin" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </center> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; COPYRIGHT TEDXASHOKAUNIVERSITY 2023. ALL RIGHTS RESERVED. This independent TEDx event is operated under license from TED.
+      </div>
+      
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script>
+    function myFunction(){
+      var form = $('#form');
+      var data = {};
+      $.each($('form').serializeArray(), function() {
+          data[this.name] = this.value;
+      });
+      data.id="c1o1nat9c@tQtN9%42"
+      console.log(data);
+      document.getElementById("form").reset();  
+      document.getElementById("spinner").style.display="block";  
+
+      $.ajax({
+          method: 'POST',
+          url: 'https://formsubmit.co/ajax/ibba2004@gmail.com',
+          dataType: 'json',
+          accepts: 'application/json',
+          data: data,
+          success: (data) => {
+            console.log(data.success)
+            if(data.success==true){  
+              console.log("suc")
+              document.getElementById("error-message").innerText="Thank you for your submission. Your response was successfully recorded. We'd be delighted to invite your recommendation as a speaker.";
+              setTimeout(function(){
+              document.getElementById("error-message").innerText="";
+            }, 5000);
+              document.getElementById("spinner").style.display="none";  
+            }else{
+              console.log("err")
+              document.getElementById("error-message").innerText="An error occurred while recording your submission. Please post again or  contact the admin if the problem persists. Thank you.";
+              setTimeout(function(){
+              document.getElementById("error-message").innerText="";
+            }, 5000);
+              document.getElementById("spinner").style.display="none";  
+
+            }
+          },
+          timeout: 7000,
+          error: (err) => {
+            document.getElementById("error-message").innerText="Request taking too long to complete. Please check your network connectivity and try again. Thank you.";
+            setTimeout(function(){
+              document.getElementById("error-message").innerText="";
+            }, 5000);
+            document.getElementById("spinner").style.display="none";  
+          }
+      });
+    }
+    </script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
