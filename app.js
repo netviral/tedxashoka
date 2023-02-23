@@ -80,7 +80,11 @@ app.get("/event",function(req,res){
 
 
 app.get("/lead",function(req,res){
-    Team.find({}).sort({'clues':-1,'updatedAt':1}).exec(function(err, docs) { res.send(docs); });
+    if(req.query.key=="tedxashoka"){
+        Team.find({}).sort({'clues':-1,'updatedAt':1}).exec(function(err, docs) { res.send(docs); });
+    }else{
+        res.send(404);
+    }
 });
 
 app.get("/partners",function(req,res){
@@ -89,6 +93,20 @@ app.get("/partners",function(req,res){
 
 app.get("/register",function(req,res){
     res.render("registration");
+});
+
+app.get("/data",function(req,res){
+    if(req.query.key=="tedxashoka"){
+    Clue.find({},function(err,docs){
+        if(err){
+            console.log(err);
+        }else{
+            res.send(docs);
+        }
+    })
+} else{
+    res.send(404);
+}
 });
 
 

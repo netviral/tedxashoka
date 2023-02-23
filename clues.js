@@ -44,7 +44,7 @@ Clue.create([
 {
     _id:2,
     code:"UQMWkNTRIUcB",
-    clue:"What price went up first: the chicken sandwich or the omlette?!"
+    clue:"What price was inflated first: the chicken sandwich or the omlette?!"
 },
 {
     _id:3,
@@ -59,12 +59,12 @@ Clue.create([
 {
     _id:5,
     code:"F8ugKiBGD2hZ",
-    clue:"You must split the team in two for each half of the clue lies in different places. Morse code that says HDFC."
+    clue:"I was once a modern convenience and have been around for decades but recently my digital nemesis has overtaken me in spades."
 },
 {
     _id:6,
     code:"hd2SBkwrgizb",
-    clue:""
+    clue:"Loudest place on campus on 18th December 2022"
 },
 {
     _id:7,
@@ -74,7 +74,7 @@ Clue.create([
 {
     _id:8,
     code:"qrm0UOmzIjlO",
-    clue:"Where athletes sweat and fans cheer, a place where points are made quite clear. On this place of hardwood frame, economic principles are also in the game. Look for a place of great competition, where supply and demand are in full fruition. From guessing oponent's plays to team player auctions, the realities here will unveil economic situations. So lace up your shoes and take a shot, the ________ _______ has the clue you sought."
+    clue:"Listen up, players, it's time to strategize,To proceed in the hunt, you need to devise a plan that takes into account every move, and outsmart your opponents to improve. Where athletes sweat and fans cheer, a place where points are made quite clear. So lace up your shoes and take a free-throw; The ________ _______ has the clue you wanna know."
 },
 {
     _id:9,

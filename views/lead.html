@@ -320,7 +320,7 @@ function createTable(data) {
     html += createTableRow(e,counter);
     counter++;
   })
-  $('#test').append(html);
+  $('#test').html(html);
 }
 // adding content to the DOM
 function createTableRow(result,count) {
@@ -332,12 +332,20 @@ function createTableRow(result,count) {
             <td class="list__cell"><span class="list__value">${new Date(result.updatedAt).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric',second:'numeric', hour12: true })}</span><small class="list__label">Last updated</small></td>
           </tr>`
 }
-// AJAX request with GET action from the mock API source
-$.get("http://localhost:3000/lead", function(data) {
+$.get("https://tedxashokauniversity.com/lead?key=tedxashoka", function(data) {
   // creating the "table" with the received data
   console.log(data);
   createTable(data)
 });
+
+// AJAX request with GET action from the mock API source
+setInterval(function () {
+  $.get("https://tedxashokauniversity.com/lead?key=tedxashoka", function(data) {
+  // creating the "table" with the received data
+  console.log(data);
+  createTable(data)
+  });
+}, 5000);
 })
 </script>
 </html>
