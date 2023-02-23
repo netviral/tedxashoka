@@ -170,7 +170,7 @@ app.post("/clues/:number",function(req,res){
                                             var numb=parseInt(req.params.number)+1;
                                             console.log(numb);
                                             if(numb>10){
-                                                res.render("indclue",{clueText:"Congratulations. Now concentrate on studies."});
+                                                res.render("indclue",{clueText:"You've finished all your clues. Please reach back to the leaderboard at the meeting spot."});
 
                                             }else{
                                             Clue.findOne({_id:numb},function(err,baby){
@@ -185,7 +185,7 @@ app.post("/clues/:number",function(req,res){
                                         }
                                     });
                                 }else{
-                                    res.render("indclue",{clueText:"ABHAHAHAHHA NO BRO REACH THE CLUE FIRST AND SCAN THE CODE CORRECTLY"});
+                                    res.render("indclue",{clueText:"ABHAHAHAHHA NO BRO SCAN THE CODE CORRECTLY"});
                                 }
                             });
 
