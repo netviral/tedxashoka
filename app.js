@@ -43,56 +43,57 @@ const Clue = mongoose.model('Clue', clues);
 //     }, function(err,res){
 //         console.log(res);
 //     });
+
 // Clue.create([
 // {
 //     _id:1,
 //     code:"BdHjiNiTWVWo",
-//     clue:"Clue 1"
+//     clue:"The average Ashokans caffeine, couch, and courework paradise. "
 // },
 // {
 //     _id:2,
 //     code:"UQMWkNTRIUcB",
-//     clue:"Clue 2"
+//     clue:"What price went up first: the chicken sandwich or the omlette?!"
 // },
 // {
 //     _id:3,
 //     code:"g4tfyyFhASHh",
-//     clue:"Clue 3"
+//     clue:"Kiss your partner 30 feet in the air."
 // },
 // {
 //     _id:4,
 //     code:"6uur9sVAjgKx",
-//     clue:"Clue 4"
+//     clue:"Search high and low, and look all around. In a place where people meet the ground, it stands alone on its peak, the lonely twin awaits your feet."
 // },
 // {
 //     _id:5,
 //     code:"F8ugKiBGD2hZ",
-//     clue:"Clue 5"
+//     clue:"You must split the team in two for each half of the clue lies in different places. Morse code that says HDFC."
 // },
 // {
 //     _id:6,
 //     code:"hd2SBkwrgizb",
-//     clue:"Clue 6"
+//     clue:""
 // },
 // {
 //     _id:7,
 //     code:"UbCar8q9fyua",
-//     clue:"Clue 7"
+//     clue:"Follow this link for the clue: https://youtu.be/dBJpKGMyT6Q"
 // },
 // {
 //     _id:8,
 //     code:"qrm0UOmzIjlO",
-//     clue:"Clue 8"
+//     clue:"Where athletes sweat and fans cheer, a place where points are made quite clear. On this place of hardwood frame, economic principles are also in the game. Look for a place of great competition, where supply and demand are in full fruition. From guessing oponent's plays to team player auctions, the realities here will unveil economic situations. So lace up your shoes and take a shot, the ________ _______ has the clue you sought."
 // },
 // {
 //     _id:9,
 //     code:"uB6DRucMLKTp",
-//     clue:"Clue 9"
+//     clue:"Error 102: this sculpture has already been booked."
 // },
 // {
 //     _id:10,
 //     code:"t7mxN0nUENU6",
-//     clue:"Clue 10"
+//     clue:"YOUR STAGE is what you seek, at TedXAshoka many will speak. You've reached the end of this fight, for the treasure is hiding in plain sight."
 // },
 // ]).then((result => {
 //     if(result) {
