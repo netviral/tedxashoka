@@ -31,11 +31,37 @@
       position:relative;
       bottom:100px;
     }
-    @media screen and (min-width: 480px) {
+    .label{
+      position: relative;
+      font-size: 25px;
+      left: 10px;
+    }
+    .count{
+      position: relative;
+      right: 15px;
+    }
+    @media screen and (max-width: 480px) {
       .custom{
       position:relative;
-      bottom:150px;
-    }
+      bottom:80px;
+      right: 35px;
+      font-size: 28px;
+      }
+      .counting{
+        position: relative;
+        margin-right: 10px;
+      }
+      .count{
+        position: relative;
+        font-size: 35px;
+        left: 3px;
+      }
+      .label{
+        font-size: 15px;
+        position: relative;
+        right: 7px;
+      }
+    
 }
   </style>
     <link href="/assets/css/font.css" rel="stylesheet">
@@ -92,7 +118,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
          <center>
-          <div class="col-lg-10">
+          <div class="counting col-lg-10">
             <ul id="counter">
              <span class="count percent" data-count="4500"> 0
                 </span>
@@ -108,11 +134,11 @@
          <center>
           <div class="col-lg-10">
             <ul id="counter">
-             <span><font size = "4">Students on Campus</font>
+             <span class = "label">Students
                 </span>
-             <span><font size = "4">Online Views</font>
+             <span class = "label">Online Views
                 </span>
-             <span><font size = "4">Speakers</font>
+             <span class = "label">Speakers
                 </span>
             </ul>
           </div>
