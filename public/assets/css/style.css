@@ -8,10 +8,16 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/* @font-face {
+font-family: "CustomFont";
+src: url("/assets/css/helveticaneue.ttf");
+} */
+
 body {
   background: #fff;
   color: #2f3138;
-  font-family: "HelveticaNeue-Bold";
+font-family: 'Work Sans', sans-serif;
 }
 
 a {
@@ -32,7 +38,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -118,8 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-header h2 {
   font-size: 66px;
-  font-family: "tw cen mt";
-  color: #000;
+font-family: 'Work Sans', sans-serif;  color: #000;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -180,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -250,8 +255,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "\f107";
   position: absolute;
   right: 15px;
-  font-family: "tw cen mt";
-  font-style: normal;
+font-family: 'Work Sans', sans-serif;  font-style: normal;
   font-weight: normal;
 }
 
@@ -279,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: rgba(202, 206, 221, 0.8);
-  font-family: "tw cen mt", sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-weight: 600;
   font-size: 18px;
   outline: none;
@@ -486,7 +490,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro-bg.jpg) top center;
+  background: url(../img/home.jpg) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -532,8 +536,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
   margin-top: auto;
   color: #fff;
-  font-family: "HelveticaNeue-Bold";
-  font-size: 46px;
+font-family: 'Work Sans', sans-serif;  font-size: 46px;
   font-weight: 600;
 }
 
@@ -631,7 +634,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .about-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -700,8 +703,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  font-family: "tw cen mt";
-  font-size: 60px;
+font-family: 'Work Sans', sans-serif;  font-size: 60px;
   li{
     flex: 1;
     text-align: center;
@@ -747,7 +749,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #team {
     width: 100%;
     height: 100vh;
-    background: url(../img/intro-bg.jpg) top center;
+    /* background: url(../img/intro-bg.jpg) top center; */
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -792,7 +794,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   
   #team h1 {
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "CustomFont", sans-serif;
     font-size: 56px;
     font-weight: 600;
     text-transform: uppercase;
@@ -892,7 +894,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   
   #team .about-btn {
-    font-family: "Raleway", sans-serif;
+    font-family: "CustomFont", sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
@@ -993,7 +995,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   
   #event h1 {
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "CustomFont", sans-serif;
     font-size: 56px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1093,7 +1095,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   
   #event .about-btn {
-    font-family: "Raleway", sans-serif;
+    font-family: "CustomFont", sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
@@ -1577,7 +1579,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 18px 0;
   display: block;
   position: relative;
-  font-family: "Raleway", sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -1946,8 +1948,7 @@ margin-top: 10px;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "HelveticaNeue-Bold";
-  font-weight: 700;
+font-family: 'Work Sans', sans-serif;  font-weight: 700;
   color: #fff;
 }
 
@@ -1960,8 +1961,7 @@ margin-top: 10px;
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "HelveticaNeue-Bold";
-  color: #fff;
+font-family: 'Work Sans', sans-serif;  color: #fff;
 }
 
 #footer .footer-top .social-links a {

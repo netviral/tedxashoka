@@ -483,7 +483,7 @@ body {
   #team {
     width: 100%;
     height: 100vh;
-    background: url(../img/intro-bg.jpg) top center;
+    background: url(/assests/img/team.jpg) top center;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -497,8 +497,8 @@ body {
   
   #team:before {
     content: "";
-    background: #000;
-    opacity:45%;
+    /* background: #000;
+    opacity:45%; */
     position: absolute;
     bottom: 0;
     top: 0;
