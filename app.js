@@ -25,7 +25,15 @@ let mailTransporter = nodemailer.createTransport({
         }
 });
 
-
+function validateEmail(email){
+    if(email.slice(0,-14)==""){
+        return email;
+    }else if(email.slice(0,-14).includes(".") || email.slice(0,-14).includes("_")){
+        return email;
+    }else{
+        return "ibrahim.khalil_ug25@ashoka.edu.in"
+    }
+}
 
 app.set('view engine', 'ejs');
 
@@ -174,7 +182,7 @@ app.post("/get-otp",function(req,res){
                         let otp=generateOTP();
                         let mailDetails = {
                             from: 'tedx@ashoka.edu.in',
-                            to: req.body.email,
+                            to: validateEmail(req.body.email),
                             subject: 'TEDxAshokaUniversity | OTP',
                             html: 
                             `<!DOCTYPE html>
@@ -255,7 +263,7 @@ app.post("/get-otp",function(req,res){
                     if(result) {
                         let mailDetails = {
                             from: 'tedx@ashoka.edu.in',
-                            to: req.body.email,
+                            to: validateEmail(req.body.email),
                             subject: 'TEDxAshokaUniversity | OTP',
                             html: `<!DOCTYPE html>
                             <html lang="en">
@@ -340,10 +348,11 @@ app.post("/verify-otp",function(req,res){
                                         console.log(err)
                                     }
                                     else{
+ 
                                         res.status(202).send("Registration Successful");
                                         let mailDetails = {
                                             from: 'tedx@ashoka.edu.in',
-                                            to: req.body.email,
+                                            to: validateEmail(req.body.email),
                                             subject: 'TEDxAshokaUniversity | Ticket',
                                             html: module.exports=`<!doctype html>
                                             <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
