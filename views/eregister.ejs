@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TEDxAshokaUniversity</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/X.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/assets/vendor/owl.carousel//assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <style>
+ 
+    @media screen and (min-width: 767px) {
+ #someda{
+  margin-top:20px;
+ }
+}
+#select{
+background: rgba(255, 255, 255, 0.1);
+color: #fff;
+border: 0;
+outline: none;
+margin: 0;
+padding: 9px 20px;
+font-size: 14px;
+}
+  </style>
+
+  <!-- =======================================================
+  * Template Name: TheEvent - v3.0.0
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
+        <a href="/" class="scrollto"><img src="/assets/img/TEDxAshokaUni.png" alt="" title="" width="275"></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/speakers">Speakers</a></li>
+          <li><a href="/event">Event</a></li>
+          <li><a href="/partners">Partners</a></li>
+          <li class="menu-active"><a href="/register">Registration</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+
+
+  <main id="main">
+
+    <!-- ======= Subscribe Section ======= -->
+    <section id="subscribe">
+      <div class="container" data-aos="zoom-in">
+        
+      <%if(shut){%>
+        <div style="margin-top:100px" class="section-header">
+          <h2>Seats full!</h2>
+        </div>
+      <%}else{%>
+        <div style="margin-top:100px" class="section-header">
+          <h2>Book Your Tickets!</h2>
+        </div>
+        <div class="form">
+          <form id="eregister" role="form">
+            <div class="row">
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input required type="text" name="name" class="form-control" id="name" placeholder="Full Name" />
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input required type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number" />
+              </div>
+            </div>
+            <div id="someda" class="row">
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input pattern=".+@ashoka\.edu\.in" size="30" required type="email" class="form-control" name="email" id="email" placeholder="Ashoka Email id" data-msg="Enter valid email" />
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <select class="form-control" name="batch" id="select">
+                    <option>Select</option>
+                    <option>ASP 23</option>
+                    <option>UG 23</option>
+                    <option>UG 24</option>
+                    <option>UG 25</option>
+                    <option>Others</option>
+                </select>
+              </div>
+            </div>
+            <div id="someda" class="row d-flex justify-content-center">
+              <div style="display:none;" id = "otpinput" class="form-group col-md-6 mt-3 mt-md-0">
+                <input class="form-control" name="otp" id="otp" placeholder="Enter OTP" data-msg="Enter valid OTP" />
+              </div>
+            </div>
+            <div id="sender" class="text-center"><button name="sender">Send</button></div>
+            <div style="display: none; padding-top: 10px;" id = "regbtn" class="text-center"><button type="submit">Register</button></div>
+          </form>
+        </div>
+      <%}%>
+      </div>
+    </section><!-- End Subscribe Section -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+         <div class="col-lg-10 col-md-6 footer-info"></div>
+          <div class="col-lg-10 col-md-6 footer-info">
+            <h3>What is <font color = "EB0028">TEDx</font>?</h3>
+            <p>In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. 
+              </p><br><br>
+          </div>
+            <center>
+            <div class="social-links">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tedx@ashoka.edu.in"
+ class="twitter" target="_blank"><i class="fa fa-envelope"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100090096037240&mibextid=LQQJ4d" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/company/tedxashokauniversity/" class="instagram" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://twitter.com/TEDxAshoka" class="google-plus" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://instagram.com/tedxashokauniv?igshid=YmMyMTA2M2Y=" class="linkedin" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </center> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; COPYRIGHT TEDXASHOKAUNIVERSITY 2023. ALL RIGHTS RESERVED. This independent TEDx event is operated under license from TED.
+      </div>
+      
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+
+  <script>
+       
+// https://api.jquery.com/jQuery.ajax
+$('#sender').on("click",function(e) {
+    var form = $('#eregister');
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var phone=document.getElementById("phone").value;
+    var select=document.getElementById("select").value;
+    var otpinput=document.getElementById("otpinput");
+    var subBtn=document.getElementById("regbtn")
+    var sendBtn=document.getElementById("sender")
+    var otpbox=document.getElementById("otp")
+
+    if ((name == null || name == "") || (email == null || email == "") || (phone == null || phone == "") || (select == null || select == "Select")) {
+      alert("Please Fill In All Required Fields");
+    }else{
+      sendBtn.style.display="none";
+      otpinput.style.display='block'
+      subBtn.style.display="block";
+      otp.setAttribute('required', '');
+    
+    
+
+    var data = {};
+    $.each($('#eregister').serializeArray(), function() {
+          data[this.name] = this.value;
+    });
+    console.log(data);
+    $.ajax({
+    method: 'POST',
+    url: '/get-otp',
+    dataType: 'json',
+    accepts: 'application/json',
+    data: data,
+    success: (data) => {
+      console.log(data);
+      if(data.success=='true'){
+          
+      }
+    },
+    error: (err) => console.log(err)
+});
+    }
+});
+
+$('#eregister').on('submit', function(e) {
+    e.preventDefault();
+    e.stopPropagation(); // only neccessary if something above is listening to the (default-)event too
+    var form = $('#eregister');
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var phone=document.getElementById("phone").value;
+    var select=document.getElementById("select").value;
+    var data = {};
+    var otpinput=document.getElementById("otpinput");
+    var subBtn=document.getElementById("regbtn");
+    var sendBtn=document.getElementById("sender");
+    var otpbox=document.getElementById("otp");
+    $.each($('#eregister').serializeArray(), function() {
+          data[this.name] = this.value;
+    });
+    console.log(data);
+    document.getElementById("eregister").reset();
+    sendBtn.style.display="block";
+    otpinput.style.display='none'
+    subBtn.style.display="none";
+    otp.removeAttribute('required');
+    $.ajax({
+    method: 'POST',
+    url: '/verify-otp',
+    dataType: 'json',
+    accepts: 'application/json',
+    data: data,
+    success: function(data) {
+      console.log(data.status);
+      console.log(data);
+     
+        var a=XHR.status;
+        console.log(a);
+        console.log(a==403);
+        if (a==403){
+          console.log("Already registered")
+        }
+    },
+    error: (err) => {
+      console.log(err.status);
+      alert(err.responseText)
+
+    }
+});
+
+});
+    </script>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/assets/vendor/superfish/superfish.min.js"></script>
+  <script src="/assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
