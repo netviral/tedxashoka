@@ -126,7 +126,7 @@ app.get("/eregister",function(req,res){
         }else{
             res.render("eregister",{shut:true});
         }
-    })
+    });
 });
 
 
@@ -797,7 +797,7 @@ app.post("/verify-otp",function(req,res){
                                                                             <div style="font-family:Lato, system-ui, sans-serif;font-size:13px;line-height:1;text-align:left;color:#e3e4e8;">
                                                                               <mj-raw>
                                                                                 <h2 class="news-header" style="margin: 0 0 5px 0;">
-                                                                                  14th April, 2023 | 9:00 AM
+                                                                                  14th April, 2023 | 3:00 PM
                                                                                 </h2>
                                                                                 <p style="color: #9dabc9; margin: 0 0 15px 0;font-size: 16px;">Reddy's Auditorium.</p>                                  </mj-raw>
                                                                               
@@ -829,7 +829,7 @@ app.post("/verify-otp",function(req,res){
                                                                             <div style="font-family:Lato, system-ui, sans-serif;font-size:13px;line-height:1;text-align:left;color:#e3e4e8;">
                                                                               <mj-raw>
                                                                                 <h2 class="news-header" style="margin: 0 0 5px 0;">
-                                                                                  Your <img src=src="https://tedxashokauniversity.com/email/subway" style="width: 145px;" /> code: ${subwayCode}
+                                                                                  Your <img src="https://tedxashokauniversity.com/email/subway" style="width: 145px;" /> code: ${subwayCode}
                                                                                 </h2>
                                                                                 <p style="color: #9dabc9; margin: 0 0 15px 0;font-size: 16px;">Show the ticket and code to the cashier at Subway to avail 20% discount on your order. Redeemable only once.</p>
                                                                                 <div class="news-bar"></div>
@@ -965,7 +965,7 @@ app.post("/verify-otp",function(req,res){
 
 app.get("/register",function(req,res){
     Registrations.find({confirmed:true},function(err,docs){
-        if(docs.length<8){
+        if(docs.length<401){
             res.render("eregister",{shut:false});
         }else{
             res.render("eregister",{shut:true});
@@ -975,7 +975,7 @@ app.get("/register",function(req,res){
 });
 
 app.get("/email/tedx",function(req,res){
-    res.sendFile(__dirname+"/TEDxAshokauni.png");
+    res.sendFile(__dirname+"/TEDxAshokaUni.png");
 });
 
 app.get("/email/subway",function(req,res){
