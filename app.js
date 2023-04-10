@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 var cors = require('cors')
 app.use(cors());
 const nodemailer = require('nodemailer');
+let from = `TEDx AshokaUniversity <tedx@ashoka.edu.in>`
 
 //test
 //test
@@ -181,7 +182,7 @@ app.post("/get-otp",function(req,res){
                     }else{
                         let otp=generateOTP();
                         let mailDetails = {
-                            from: 'tedx@ashoka.edu.in',
+                            from: from,
                             to: validateEmail(req.body.email),
                             subject: 'TEDxAshokaUniversity | OTP',
                             html: 
@@ -262,7 +263,7 @@ app.post("/get-otp",function(req,res){
                 }).then((result => {
                     if(result) {
                         let mailDetails = {
-                            from: 'tedx@ashoka.edu.in',
+                            from: from,
                             to: validateEmail(req.body.email),
                             subject: 'TEDxAshokaUniversity | OTP',
                             html: `<!DOCTYPE html>
@@ -351,7 +352,7 @@ app.post("/verify-otp",function(req,res){
  
                                         res.status(202).send("Registration Successful");
                                         let mailDetails = {
-                                            from: 'tedx@ashoka.edu.in',
+                                            from: from,
                                             to: validateEmail(req.body.email),
                                             subject: 'TEDxAshokaUniversity | Ticket',
                                             html: `<!doctype html>
