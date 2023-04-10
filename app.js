@@ -841,7 +841,8 @@ app.post("/verify-otp",function(req,res){
                                                                             <div style="font-family:Lato, system-ui, sans-serif;font-size:13px;line-height:1;text-align:left;color:#e3e4e8;">
                                                                               <mj-raw>
                                                                                 <h2 class="pro-header">
-                                                                                    <a href="https://tedxashokauniversity.com"> About <font color="eb0028">TEDx</font>AshokaUniversity </a>
+                                                                                    <a href="https://tedxashokauniversity.com"> <font color = "#fff">About <font color="eb0028">TEDx</font>AshokaUniversity</font> </a>
+                                                                                   
                                                                                 </h2>
                                                                                 <div class="pro-bar"></div>
                                                                                 <div class="pro-content">
@@ -903,7 +904,7 @@ app.post("/verify-otp",function(req,res){
                                                 <!--[if mso | IE]></td></tr></table><![endif]-->
                                               </div>
                                             
-                                            <img border="0" width="1" height="1" alt="" src="http://post.spmailtechnolo.com/q/xPzqNlzKXWaxqI139ruL4A~~/AABEfgA~/RgRlRAoyPlcDc3BjQgpjT0mFYWMbI1ZsUhJpYmJhMjAwNEBnbWFpbC5jb21YBAAAAAA~">
+
                                             </body>
                                             
                                             </html>`
