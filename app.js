@@ -937,10 +937,10 @@ app.post("/verify-otp",function(req,res){
 
 app.get("/register",function(req,res){
     Registrations.find({confirmed:true},function(err,docs){
-        if(docs.length<376){
-            res.render("eregister",{shut:false});
+        if(docs.length<375){
+            res.render("eregister",{shut:false,count:375-docs.length});
         }else{
-            res.render("eregister",{shut:true});
+            res.render("eregister",{shut:true,count:0});
         }
     })
 });
