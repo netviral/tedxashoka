@@ -354,7 +354,7 @@ app.post("/verify-otp",function(req,res){
                                             from: 'tedx@ashoka.edu.in',
                                             to: validateEmail(req.body.email),
                                             subject: 'TEDxAshokaUniversity | Ticket',
-                                            html: module.exports=`<!doctype html>
+                                            html: `<!doctype html>
                                             <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
                                             
                                             <head>
@@ -820,46 +820,7 @@ app.post("/verify-otp",function(req,res){
                                                               </tbody>
                                                             </table>
                                                           </div>
-                                                <div style="background:#131417;background-color:#131417;margin:0px auto;max-width:600px;">
-                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#131417;background-color:#131417;width:100%;">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td style="direction:ltr;font-size:0px;padding:20px 0;padding-top:15px;text-align:center;">
-                                                          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-                                                          <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                                              <tbody>
-                                                                <tr>
-                                                                  <td style="vertical-align:top;padding:15px;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                      <tbody>
-                                                                        <tr>
-                                                                          <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                                                            <div style="font-family:Lato, system-ui, sans-serif;font-size:13px;line-height:1;text-align:left;color:#e3e4e8;">
-                                                                              <mj-raw>
-                                                                                <h2 class="news-header" style="margin: 0 0 5px 0;">
-                                                                                  Your <img src="https://tedxashokauniversity.com/email/subway" style="width: 145px;" /> code: ${subwayCode}
-                                                                                </h2>
-                                                                                <p style="color: #9dabc9; margin: 0 0 15px 0;font-size: 16px;">Show the ticket and code to the cashier at Subway to avail 20% discount on your order. Redeemable only once.</p>
-                                                                                <div class="news-bar"></div>
-                                                                              </mj-raw>
-                                                                              
-                                                                            </div>
-                                                                          </td>
-                                                                        </tr>
-                                                                      </tbody>
-                                                                    </table>
-                                                                  </td>
-                                                                </tr>
-                                                              </tbody>
-                                                            </table>
-                                                          </div>
-                                                          <!--[if mso | IE]></td></tr></table><![endif]-->
-                                                        </td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
+                                                
                                                 <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#333845" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
                                                 <div style="background:#333845;background-color:#333845;margin:0px auto;max-width:600px;">
                                                   <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#333845;background-color:#000;width:100%;">
@@ -879,7 +840,7 @@ app.post("/verify-otp",function(req,res){
                                                                             <div style="font-family:Lato, system-ui, sans-serif;font-size:13px;line-height:1;text-align:left;color:#e3e4e8;">
                                                                               <mj-raw>
                                                                                 <h2 class="pro-header">
-                                                                                    <a href="http://post.spmailtechnolo.com/f/a/BpwgDavF36aVAHLScnUsVA~~/AABEfgA~/RgRlRAoyP0QXaHR0cHM6Ly9jb2RlcGVuLmlvL3Byby9XA3NwY0IKY09JhWFjGyNWbFISaWJiYTIwMDRAZ21haWwuY29tWAQAAAAA"> About <font color="eb0028">TEDx</font>AshokaUniversity </a>
+                                                                                    <a href="https://tedxashokauniversity.com"> About <font color="eb0028">TEDx</font>AshokaUniversity </a>
                                                                                 </h2>
                                                                                 <div class="pro-bar"></div>
                                                                                 <div class="pro-content">
@@ -974,13 +935,12 @@ app.post("/verify-otp",function(req,res){
 
 app.get("/register",function(req,res){
     Registrations.find({confirmed:true},function(err,docs){
-        if(docs.length<401){
+        if(docs.length<376){
             res.render("eregister",{shut:false});
         }else{
             res.render("eregister",{shut:true});
         }
     })
-    // res.render("registration");
 });
 
 app.get("/email/tedx",function(req,res){
