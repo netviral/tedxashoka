@@ -319,7 +319,7 @@ $(window).scroll(function() {
 // document.getElementById("minute").innerHTML = minutes;
 
 
-var countDownDate = new Date("14 apr, 2023 00:00:00").getTime();
+var countDownDate = new Date("15 apr, 2023 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

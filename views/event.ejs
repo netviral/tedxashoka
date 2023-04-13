@@ -381,15 +381,10 @@ function updateClock() {
 setTimeout(updateClock,500);
 }
 
-var deadline = new Date(Date.parse(new Date("April 14, 2023 00:00:00")));
+var deadline = new Date(Date.parse(new Date("April 14, 2023 15:00:00")));
 var c = new Clock(deadline, function(){ alert('Event is here!') });
 document.body.appendChild(c.el);
 document.getElementById("counter").appendChild(c.el);
-
-
-
-
-
   </script>
 
   <!-- Vendor JS Files -->
